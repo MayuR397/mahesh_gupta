@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+.nabarContainer {
+    background-color: #16b5a2b4;
+    padding: 0.8rem 7rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nabarContainer>h1 {
+    font-family: 'Whisper', cursive;
+    font-size: 2rem;
+}
+
+.navlist>ul {
+    display: flex;
+    list-style: none;
+    column-gap: 1.5rem;
+}
+
+.navlist>ul>a {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+}
+
+.navlist>ul>a>li {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in;
+}
+.navlist>ul>a>li:hover{
+    color: #0a0a0a;
+}
+
+.navlist>ul>a>li:hover::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: #0a0a0a;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
+
+.hamburgur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburgur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.hamburgur button{
+    z-index: 999;
+    font-weight: bold;
+}
+.navListfterClick{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #080606f0;
+    margin-top: 5rem;
+    width: 60%;
+    height: 60vh;
+    z-index: 111;
+    transition: 0.5s ease-in-out;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.navListfterClick >ul >a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navListfterClick >ul >a> li{
+    list-style: none;
+    color: #2a9d8f;
+    border: 2px solid #2a9d8f;
+    padding: 0.4rem 1.5rem;
+    border-radius: 1.3rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+    .nabarContainer {
+        padding: 1rem 3rem;
+    }
+
+    .nabarContainer>h1 {
+        font-size: 2.5rem;
+    }
+    .navlist > ul > a >li{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hamburgur{
+        display: block;
+    }
+    .navlist>ul {
+        display: none;
+    }
+
+}
